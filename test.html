@@ -1,0 +1,139 @@
+<!---Additional Task - Ines Reis
+Missing:
+- changing the input fields borders in white to Orange, Blue, and Red when applicable
+- add Search dropdown menu
+- error message when wrong data is entered
+- better margin sizes
+--->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title>Sign Up for updates - Nestlé</title>
+   <meta name="description" content="For the first time ever, personalized updates and exclusive offers from Nestlé directly to your inbox."
+    />
+    
+    <style>
+      
+      .center {
+        margin: auto;
+        width: 36%;
+        padding: 10px;
+     }
+      
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+      
+      
+      h2, h4 {
+        color: white;
+        font-family: Arial, sans-serif;
+        }
+        
+      input{
+       color: white;
+        }
+      
+      input.formatter  {
+        width: 150px;
+        padding: 12px;
+        margin: 10px 0;
+        box-sizing: border-box;
+        border: 2px solid white;
+        background-color: black;
+        }
+      
+      input:hover{
+        outline: 2px solid #ec600b;
+      }
+
+      input[type=text]:focus{
+        outline: 2px solid blue;    
+      }
+      
+      input:invalid {
+        border: 2px solid red;
+      }
+
+      .required {
+         color: red;
+       }
+      
+      .button {
+        border: none;
+        color: white;
+        background-color: #ec600b;
+        padding: 10px;
+        margin-top: 50px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        width: 250px;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;    
+      }
+    
+    </style>
+</head>
+  
+  <body>
+    
+  <div class="center">
+  
+   
+  <h2>Sign Up to get more<br>
+    Updates</h2>
+  <h4>
+    Contact<br>
+    Information</h4>
+  
+  <div class="grid-container">
+  <div class="grid-item"><label for="fname">Full name<span class="required">*</span></label><br>
+  <input type="text" class="formatter" placeholder="Your full name"></div>
+  <div class="grid-item"><label for="email">E-mail<span class="required">*</span></label><br>
+    <input type="text" class="formatter" placeholder="Your e-mail"></div>
+  </div>
+  <label for="phone">Phone number<span class="required">*</span></label><br>
+  <input type="tel" class="formatter" pattern="[0-9]{3}-[0-9]{4}" placeholder="(123) _ _ _ - _ _ _ _">
+
+  
+    <h4>
+    Delivery<br>
+    Information</h4>
+  
+
+  <label for="country">Country<span class="required">*</span></label><br>
+  <input type="text" class="formatter" placeholder="Your country" onkeyup="filterFunction()"><br>
+
+  <div class="grid-container">
+  <div class="grid-item"><label for="city">City<span class="required">*</span></label><br>
+  <input type="text" class="formatter" placeholder="Your city"></div>
+  
+   <div class="grid-item"> <label for="zipcode">Zip code<span class="required">*</span></label><br>
+   <input type="text" class="formatter" placeholder="_ _ _ - _ _ _"></div><br>
+   </div>
+          
+  
+   <h4>Preferences<br>
+    Confirmation</h4>
+  <input type="checkbox" id="marketing" class="checkmark">
+  <label for="marketing"> I want to receive news, advice and marketing offers from Nestlé</label><br>
+  <br>
+  <input type="checkbox" id="newsletter" class="checkmark">
+  <label for="newsletter"> I want to receive a newsletter about price changes</label><br>
+  <br>
+  <input type="checkbox" id="data" class="checkmark">
+  <label for="data"> I allow to use my data to personalize content and marketing activities</label><br>
+
+  <button class="button button1">Create a profile</button>
+  
+  </div>
+ </body>
+</html>
